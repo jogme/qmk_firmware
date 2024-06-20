@@ -1,0 +1,9 @@
+{
+    "manufacturer": "Crokto",
+    "keyboard_name": "Daishi",
+    "usb": {
+        "pid": "0x4323",
+        "vid": "0x6D6D",
+        "device_version": "0.0.1"
+    }
+}
