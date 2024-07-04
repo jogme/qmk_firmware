@@ -15,7 +15,7 @@
 #define WIN OSM(MOD_LGUI)
 
 enum layers {
-    LAYER_COLMAC,
+    LAYER_COLEMAK,
     LAYER_SYM,
     LAYER_NAV,
     LAYER_NUM,
@@ -23,7 +23,7 @@ enum layers {
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-    [LAYER_COLMAC] = LAYOUT(
+    [LAYER_COLEMAK] = LAYOUT(
                       KC_W,    KC_F,    KC_P,    KC_G,      KC_J,    KC_L,    KC_U,    KC_Y,
     KC_Q,    KC_A,    KC_R,    KC_S,    KC_T,    KC_D,      KC_H,    KC_N,    KC_E,    KC_I,    KC_O,    KC_QUOT,
              KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,      KC_K,    KC_M,    KC_COMM, KC_DOT,  KC_ENT,
@@ -40,14 +40,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                         _______, _______,   _______, _______),
     [LAYER_NUM] = LAYOUT(
                       KC_5,    KC_3,    KC_1,    KC_9,      KC_8,    KC_0,    KC_2,    KC_4,
-    KC_7,    SHIFT,   KC_NO,   KC_NO,   WIN,     KC_F11,    KC_F10,  KC_NO,   KC_NO,   KC_NO,   KC_NO,  KC_6,
-             KC_F7,   KC_F5,   KC_F3,   KC_F1,   KC_F9,     KC_F8,   KC_F12,  KC_F2,   KC_F4,   KC_F6,
+    KC_7,    SHIFT,   KC_NO,   KC_NO,   WIN,     KC_F11,    KC_F12,  KC_NO,   KC_NO,   KC_NO,   KC_NO,  KC_6,
+             KC_F7,   KC_F5,   KC_F3,   KC_F1,   KC_F9,     KC_F8,   KC_F10,  KC_F2,   KC_F4,   KC_F6,
                                         _______, _______,   _______, _______),
     [LAYER_GAM_LED] = LAYOUT(
-                      KC_1,    KC_2,    KC_3,    KC_4,      _______, RGB_SAD, RGB_SAI, _______,
-    KC_0,    KC_P,    KC_A,    KC_W,    KC_D,    KC_R,      RGB_HUD, RGB_VAD, RGB_VAI, RGB_HUI, _______, _______,
+                      KC_1,    KC_2,    KC_3,    KC_4,      KC_NO,   RGB_SAD, RGB_SAI, KC_NO,
+    KC_0,    KC_P,    KC_A,    KC_W,    KC_D,    KC_R,      RGB_HUD, RGB_VAD, RGB_VAI, RGB_HUI, KC_NO,  KC_NO,
              KC_LCTL, KC_Q,    KC_S,    KC_E,    KC_F,      LA_RGB,  RGB_TOG, RGB_M_B, RGB_M_P, RGB_M_K,
-                                        KC_LALT, KC_B,      _______, _______),
+                                        KC_LALT, KC_B,      KC_NO, KC_NO),
 };
 
 layer_state_t layer_state_set_user(layer_state_t state) {
